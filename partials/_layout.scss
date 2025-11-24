@@ -154,6 +154,10 @@
   padding: 54px 14px;
 }
 
+.services-description {
+  margin: 0 auto;
+}
+
 .services-content h2 {
   text-transform: uppercase;
   text-align: center;
@@ -226,7 +230,6 @@
 }
 //------------------
 
-
 // Footer -------------------
 
 .mapa {
@@ -244,9 +247,9 @@
 }
 
 .footer-icons {
-display: flex;
-gap: 8px;
-color: $white-normal;
+  display: flex;
+  gap: 8px;
+  color: $white-normal;
 }
 
 //---------------
@@ -254,10 +257,10 @@ color: $white-normal;
 // Botão Whatsapp--------------------
 
 .btn-whatsapp {
-position: fixed;
-bottom: 14px;
-right: 24px;
-z-index: 99;
+  position: fixed;
+  bottom: 14px;
+  right: 24px;
+  z-index: 99;
 
   img {
     max-width: 74px;
@@ -266,7 +269,6 @@ z-index: 99;
 
   img:hover {
     transform: scale(1.1);
-
   }
 }
 
@@ -286,11 +288,11 @@ z-index: 99;
 }
 
 .btn-whatsapp:hover .tooltip-text {
-visibility: visible;
-opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .btn-whatsapp {
     max-width: 64px;
   }

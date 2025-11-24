@@ -208,6 +208,10 @@ i {
   padding: 54px 14px;
 }
 
+.services-description {
+  margin: 0 auto;
+}
+
 .services-content h2 {
   text-transform: uppercase;
   text-align: center;
