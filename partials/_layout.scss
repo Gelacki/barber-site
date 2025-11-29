@@ -59,6 +59,7 @@
   font-size: 18px;
   font-weight: 600;
   margin: 14px 0;
+  cursor: pointer;
 }
 
 .button-contact:hover {
@@ -73,8 +74,7 @@
     opacity: 0.8;
   }
 }
-
-@media screen and (max-width: 788px) {
+@media screen and (max-width: 768px) {
   .hero {
     min-height: 60vh;
 
@@ -89,6 +89,7 @@
     }
   }
 }
+
 
 @media screen and (max-width: 480px) {
   .hero h1 {
