@@ -91,7 +91,7 @@ i {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/bg.svg");
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1)), url("assets/bg.svg");
   left: 0;
   top: 0;
   width: 100%;
@@ -131,6 +131,7 @@ i {
   font-size: 18px;
   font-weight: 600;
   margin: 14px 0;
+  cursor: pointer;
 }
 
 .button-contact:hover {
@@ -145,7 +146,7 @@ i {
     opacity: 0.8;
   }
 }
-@media screen and (max-width: 788px) {
+@media screen and (max-width: 768px) {
   .hero {
     min-height: 60vh;
   }

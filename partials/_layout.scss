@@ -19,9 +19,17 @@
   content: "";
   display: block;
   position: absolute;
+<<<<<<< HEAD
   inset: 0; // Equivalente a: top: 0; left: 0; right: 0; bottom: 0;
   background: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e),
     url("../assets/bg.svg");
+=======
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1)), url("assets/bg.svg");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+>>>>>>> f2c5fc6ff20dd86e8cb7f8842ee6fab84e2dedda
   z-index: -1;
   background-size: cover;
   background-repeat: no-repeat;
@@ -62,6 +70,7 @@
   font-size: 18px;
   font-weight: 600;
   margin: 14px 0;
+  cursor: pointer;
 }
 
 .button-contact:hover {
@@ -78,9 +87,13 @@
     transform: scale(1.05);
   }
 }
+<<<<<<< HEAD
 
 // Media query para telas médias (tablets)
 @media screen and (max-width: 788px) {
+=======
+@media screen and (max-width: 768px) {
+>>>>>>> f2c5fc6ff20dd86e8cb7f8842ee6fab84e2dedda
   .hero {
     min-height: 60vh;
 
@@ -96,7 +109,11 @@
   }
 }
 
+<<<<<<< HEAD
 // Media query para telas pequenas (celulares)
+=======
+
+>>>>>>> f2c5fc6ff20dd86e8cb7f8842ee6fab84e2dedda
 @media screen and (max-width: 480px) {
   .hero h1 {
     font-size: 24px;
