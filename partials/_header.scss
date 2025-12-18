@@ -1,52 +1,68 @@
+/* ==========================================================================
+   1. Estilos do Header
+   ========================================================================== */
 header {
   width: 100%;
 }
 
+// Conteúdo principal do header, usando flexbox para alinhar os itens
 .header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+// Cor padrão para os ícones
 i {
   color: $white-normal;
 }
 
+/* 
+  2. Ícones e Animação
+  ========================================================================== */
 .header-icons {
   display: flex;
   gap: 14px;
 }
 
+// Efeito hover para os ícones das redes sociais
 .header-icons a:hover {
   i {
     color: $red-light;
-    animation: translateY 0.8s infinite alternate;
+    animation: floatAnimation 0.8s infinite alternate;
   }
 }
 
-@keyframes translateY {
+// Animação que move o ícone para cima e aumenta a escala
+@keyframes floatAnimation {
   0% {
     transform: translateY(0px) scale(1);
   }
   100% {
-    transform: translateY(-8px) scale(1.1);
+    transform: translateY(-8px) scale(1.1); // Move 8px para cima e aumenta em 10%
   }
 }
 
+/* 
+  3. Botão de Agendamento
+  ========================================================================== */
 .header-button {
   border: 1px solid $white-normal;
   padding: 8px 24px;
   border-radius: 4px;
   color: $white-normal;
   background-color: transparent;
-  transition: background-color 0.8s ease-in-out, border 0.8s ease-in-out;
+  transition: background-color 0.8s, border-color 0.8s; // Transição suave
 }
 
 .header-button:hover {
   background-color: $red-light;
-  border: 1px solid $red-light;
+  border-color: $red-light;
 }
 
+/* 
+  4. Logo
+  ========================================================================== */
 .header-logo {
   display: flex;
   align-items: center;
@@ -54,6 +70,9 @@ i {
   margin-top: 14px;
 }
 
+/* 
+  5. Media Query para Telas Menores (Mobile)
+  ========================================================================== */
 @media screen and (max-width: 768px) {
   .header-content {
     width: 100%;
@@ -62,6 +81,7 @@ i {
     justify-content: center;
   }
 
+  // Aumenta o tamanho dos ícones e adiciona margem
   i {
     margin-top: 16px;
     font-size: 34px;
@@ -72,6 +92,7 @@ i {
     margin-top: 46px;
   }
 
+  // Esconde o botão de agendamento em telas menores
   .header-button {
     display: none;
   }

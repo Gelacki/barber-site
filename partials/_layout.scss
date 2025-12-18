@@ -1,25 +1,27 @@
+/* ==========================================================================
+   1. Container Principal
+   ========================================================================== */
 .container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 8px;
 }
 
-// BG-HOME
-
+/* ==========================================================================
+   2. Background da Home
+   ========================================================================== */
 .bg-home {
   position: relative;
 }
 
+// Pseudo-elemento para criar o background com gradiente e imagem
 .bg-home::before {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e),
+  inset: 0; // Equivalente a: top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e),
     url("../assets/bg.svg");
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
   z-index: -1;
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,10 +29,9 @@
   opacity: 0.9;
 }
 
-//------------
-
-// HERO ----------
-
+/* ==========================================================================
+   3. Seção Hero (Principal)
+   ========================================================================== */
 .hero {
   color: $white-normal;
   min-height: 80vh;
@@ -38,7 +39,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 140px;
+  padding: 14px; // Padding menor para se adaptar melhor em diferentes telas
 
   h1 {
     text-align: center;
@@ -52,6 +53,7 @@
   }
 }
 
+// Botão de contato principal
 .button-contact {
   padding: 14px 28px;
   color: $white-normal;
@@ -64,17 +66,20 @@
 
 .button-contact:hover {
   animation: scaleButton 0.8s alternate infinite;
+  transform: scale(1.05); // Adiciona um leve zoom no hover
 }
 
+// Animação de pulsar para o botão
 @keyframes scaleButton {
   from {
-    opacity: 1;
+    transform: scale(1);
   }
   to {
-    opacity: 0.8;
+    transform: scale(1.05);
   }
 }
 
+// Media query para telas médias (tablets)
 @media screen and (max-width: 788px) {
   .hero {
     min-height: 60vh;
@@ -91,16 +96,16 @@
   }
 }
 
+// Media query para telas pequenas (celulares)
 @media screen and (max-width: 480px) {
   .hero h1 {
     font-size: 24px;
   }
 }
 
-//------------
-
-// ABOUT ----------
-
+/* ==========================================================================
+   4. Seção Sobre (About)
+   ========================================================================== */
 .about {
   background-color: $primary-normal;
   overflow: hidden;
@@ -119,10 +124,12 @@
   }
 }
 
+// Garante que a div com o texto ocupe o espaço disponível
 .about-content div {
   flex: 1;
 }
 
+// Estilos para o conteúdo de texto da seção "Sobre"
 .about-description {
   h2 {
     font-size: 38px;
@@ -135,15 +142,16 @@
   }
 }
 
+// Em telas menores, os itens ficam empilhados verticalmente
 @media screen and (max-width: 768px) {
   .about-content {
     flex-direction: column;
   }
 }
 
-//-----------------------------------
-// SERVICES -------------------------
-
+/* ==========================================================================
+   5. Seção de Serviços (Services)
+   ========================================================================== */
 .services {
   background-color: $white-normal;
   color: $black-normal;
@@ -152,10 +160,6 @@
   align-items: center;
   justify-content: center;
   padding: 54px 14px;
-}
-
-.services-description {
-  margin: 0 auto;
 }
 
 .services-content h2 {
@@ -172,6 +176,7 @@
   max-width: 780px;
 }
 
+// Container para os cards de cortes de cabelo
 .haircuts {
   display: flex;
   justify-content: center;
@@ -180,6 +185,7 @@
   padding: 0 44px 34px 44px;
 }
 
+// Estilo individual de cada card de corte
 .haircut {
   flex: 1;
   display: flex;
@@ -196,11 +202,13 @@
   }
 }
 
+// Efeito de zoom na imagem ao passar o mouse
 .haircut img:hover {
   transform: scale(1.2);
   z-index: 1;
 }
 
+// Informações abaixo da imagem do corte (preço, etc)
 .haircut-info {
   width: 100%;
   display: flex;
@@ -210,6 +218,7 @@
   z-index: 99;
 }
 
+// Botão de preço (não clicável)
 .haircut-info button {
   color: $white-normal;
   background-color: $red-normal;
@@ -219,6 +228,7 @@
   cursor: default;
 }
 
+// Em telas menores, os cards de serviço ficam empilhados
 @media screen and (max-width: 768px) {
   .haircuts {
     flex-direction: column;
@@ -228,11 +238,11 @@
     max-width: 740px;
   }
 }
-//------------------
 
-// Footer -------------------
-
-.mapa {
+/* ==========================================================================
+   6. Rodapé (Footer)
+   ========================================================================== */
+.footer-map {
   width: 100%;
 }
 
@@ -252,10 +262,9 @@
   color: $white-normal;
 }
 
-//---------------
-
-// Botão Whatsapp--------------------
-
+/* ==========================================================================
+   7. Botão Flutuante do WhatsApp
+   ========================================================================== */
 .btn-whatsapp {
   position: fixed;
   bottom: 14px;
@@ -272,6 +281,7 @@
   }
 }
 
+// Tooltip que aparece ao passar o mouse sobre o botão
 .btn-whatsapp .tooltip-text {
   visibility: hidden;
   position: absolute;
@@ -287,13 +297,15 @@
   transition: opacity 0.8s;
 }
 
+// Exibe o tooltip no hover
 .btn-whatsapp:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
 }
 
+// Ajusta o tamanho do botão em telas menores
 @media screen and (max-width: 768px) {
-  .btn-whatsapp {
+  .btn-whatsapp img {
     max-width: 64px;
   }
 }
